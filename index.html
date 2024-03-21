@@ -36,11 +36,24 @@
         </div>
     </div>
     <div class="container">
-        <div class="header-text">
-            <h1 id="txt-delay" class="test">Hi, I'm <span>Bhargava Naidu</span></h1>
-            <p id="txt-slow" class="test">UI/UX Developer and Designer</p>
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="header-text">
+                    <h1 id="txt-delay" class="test">Hi, I'm <span>Bhargava Naidu</span></h1>
+                    <p id="txt-slow" class="test">UI/UX Developer and Designer</p>
+                </div>
+                <a href="Bhargav Resume_827kb.pdf" download class="btn btn2">Download CV</a>
+            </div>
+            <div class="col-sm-5">
+                
+                <div class="cover">
+                    <div class="profile">
+                        <img class="avatar" src="portimg.jpg" alt="bhargavimg" />
+                    </div>
+                </div>
+
+            </div>
         </div>
-        <a href="Bhargav Resume_827kb.pdf" download class="btn btn2">Download CV</a>
     </div>   
     
     <br>
@@ -196,14 +209,14 @@
                     <a href="#"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
                 </div>
-		    <br/>
+                <br>
                 <a href="Bhargav Resume_827kb.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-                <form action="">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="email" placeholder="Your Email" required>
-                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                <form action="" method="post" action="send_email.php">
+                    <input type="text" name="Name" placeholder="Your Name" required id="name">
+                    <input type="email" name="email" placeholder="Your Email" required id="email">
+                    <textarea name="Message" rows="6" placeholder="Your Message" id="message"></textarea>
                     <button type="submit" class="btn btn2">SEND</button>
                 </form>
             </div>
@@ -286,5 +299,7 @@
     // Delay the execution of the function by 2000 milliseconds (2 seconds)
     setTimeout(showHeading, 2000);
   </script>
+  
+  
 </body>
 </html>
