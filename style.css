@@ -85,10 +85,10 @@ nav ul li a:hover::after{
     }
   }
 #txt-delay{
-    animation: fadeIn 2s ease forwards;
+    animation: fadeIn 4s ease forwards;
 }
 #txt-slow{
-    animation: fadeIn 2s ease 1s forwards; /* Start after 1 second delay */
+    animation: fadeIn 3s ease 1s forwards; /* Start after 1 second delay */
 }
 /* ---------------------------------------------------------------------------End text animation--------------------------- */
 
@@ -98,11 +98,70 @@ nav ul li a:hover::after{
 }
 
 .header-text h1 span{
-    color: #1900ff;
+    color: #1200b0;
+}
+/* ----- */
+.cover {
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    font-size: 100;
+    color: #0a0a0a;
+  }
+  .avatar {
+    margin: auto;
+    width: 500px;
+    height: 400px;
+    margin-top: 100px;
+    cursor: pointer;
+    border-radius: 50%;
+    position: relative; /* Ensure the pseudo-element is positioned relative to this element */
+    animation: slideIn 3s ease-in-out forwards, pulse 1s infinite 3s; /* Delay pulse animation by 3s */
 }
 
+@keyframes slideIn {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: none;
+    }
+}
 
+.avatar:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+}
 
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.6);
+        opacity: 1;
+    }
+    25% {
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 0 7px rgba(255, 255, 255, 0.6);
+        transform: translateY(-15px);
+    }
+    75% {
+        box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 0 5px rgba(255, 255, 255, 0.6);
+        transform: none;
+    }
+}
 
 
 
@@ -153,7 +212,7 @@ nav ul li a:hover::after{
     content: "";
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #d71855;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -162,7 +221,7 @@ nav ul li a:hover::after{
 
 .tab-links.active-link::after{
     width: 50%;
-    background: #ff004f;
+    background: #d71855;
 }
 
 .tab-links:hover::after{
@@ -175,17 +234,19 @@ nav ul li a:hover::after{
 }
 
 .tab-contents ul li span{
-    color: #1900ff;
+    color: #1200b0;
     font-size: 14px;
     font-weight: 600;
 }
 
 .tab-contents{
     display: none;
+    animation: fadeIn 4s ease forwards;
 }
 
 .tab-contents.active-tab{
     display: block;
+    
 }
 
 .about-col-2 p {
@@ -195,6 +256,7 @@ nav ul li a:hover::after{
 /* -----------------------------------------portfolio */
 #portfolio{
     padding: 50px 0;
+    animation: fadeIn 4s ease forwards;
 }
 
 /* .work-list .row .col-sm-4{
@@ -281,7 +343,7 @@ nav ul li a:hover::after{
     margin-top: 25px;
 }
 .contact-left p i{
-    color: #1900ff;
+    color: #1200b0;
     margin-right: 15px;
     font-size: 22px;
 }
@@ -319,17 +381,18 @@ nav ul li a:hover::after{
 }
 
 .btn.btn2{
-    display: inline-block;
-    color: #fff;
-    background: #ff004f;
     border: 1px solid #1900ff;
+    color: #1f068f;
+    background: #fff;
+    display: inline-block;
     transition: background 0.8s; 
+    font-weight: 600;
 }
 
 .btn.btn2:hover{
+    color: #fff;
+    background: #1f068f;
     border: 1px solid #1900ff;
-    color: #ff004f;
-    background: #fff;
 }
 
 .contact-right form{
@@ -340,10 +403,10 @@ form input, form textarea{
     width: 100%;
     border: 0;
     outline: none;
-    background-color: #d5d2d2;
+    background-color: #0a0e53;
     padding: 15px;
     margin: 15px 0;
-    color: #000;
+    color: #fff;
     font-size: 18px;
     border-radius: 6px;
 }
@@ -431,7 +494,7 @@ nav .fa-solid{
     padding-top: 100px; /* Adjust padding to accommodate fixed header */
 }
     .header-text{
-        margin-top: 100%;
+        margin-top: 30%;
         font-size: 16px;
     }
 
@@ -498,6 +561,12 @@ nav .fa-solid{
     .contact-left, .contact-right{
         flex-basis: 100%;
         font-size: 14px;
+    }
+
+    .avatar{
+        width: 220px;
+        height: 220px;
+        margin: 10px 20%;
     }
     /* .contact-left p span{
         display: inline-block;
