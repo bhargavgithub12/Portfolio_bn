@@ -120,7 +120,7 @@ nav ul li a:hover::after{
     cursor: pointer;
     border-radius: 50%;
     position: relative; /* Ensure the pseudo-element is positioned relative to this element */
-    animation: slideIn 3s ease-in-out forwards, rotate 15s infinite 3s; /* Delay pulse animation by 3s */
+    animation: slideIn 3s ease-in-out forwards; /* Delay pulse animation by 3s */
 }
 
 @keyframes slideIn {
